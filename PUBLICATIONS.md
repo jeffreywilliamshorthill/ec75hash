@@ -6,7 +6,7 @@ Published preprints are listed separately from the dataset release and the restr
 
 | Paper | Archived version | Repository and evidence |
 |---|---|---|
-| Composition-sensitive register readouts / E114 | [v1.4.0](https://zenodo.org/records/21213596) | [moe-routing](https://github.com/ec75hash/moe-routing) |
+| Composition-sensitive register readouts / E114 | [v1.4.0](https://zenodo.org/records/21213596) | [composition-sensitive-register-readouts](https://github.com/ec75hash/composition-sensitive-register-readouts) |
 | In-context availability and routing | [v1.2](https://zenodo.org/records/23546831) | [in-context-availability-moe-routing](https://github.com/ec75hash/in-context-availability-moe-routing) |
 | AAVE / Dialect-Marked Response Audit (DMRA) | [v4.3](https://zenodo.org/records/22291463) | [dmra-paper](https://github.com/ec75hash/dmra-paper) · [sanitized artifacts](https://github.com/jeffreywilliamportfolio/dmra-public-artifacts) |
 | Subject-specific expert sets during generation | [v1.2](https://zenodo.org/records/22236999) | [paper-expert-specialization-generation](https://github.com/ec75hash/paper-expert-specialization-generation) |
