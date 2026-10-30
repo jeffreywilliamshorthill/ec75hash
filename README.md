@@ -1,28 +1,61 @@
-# Jeffrey Shorthill
+# Jeffrey W. Shorthill
 
-I’m an independent mechanistic interpretability researcher investigating how computational structures and representations develop, persist, and change across related language models.
+Independent mechanistic interpretability researcher investigating how computational structures and representations develop, persist, and change across language models.
 
-**Where do a language model’s internal representations come from, and how do they change as the model develops?**
+**Central research question:** Where do a language model's internal representations come from, and how do they change as the model develops?
 
-[Research website](https://ec75hash.github.io/) · [Open datasets](https://huggingface.co/ec75hash) · [Contact](mailto:jws299792@icloud.com)
+My research combines structural weight analysis, mixture-of-experts routing, Jacobian lenses, and causal interventions to investigate how internal computations relate to model behavior.
 
-## Research and open evidence
+[Research Website](https://ec75hash.github.io/) · [ORCID](https://orcid.org/0009-0004-3954-2752) · [Publications](PUBLICATIONS.md) · [Hugging Face](https://huggingface.co/ec75hash)
 
-- **Composition-sensitive register readouts.** E114 in Qwen3.5-35B-A3B: controlled routing experiments and causal interventions examining a readout associated with phenomenological language and its relationship to upstream representations. [Preprint](https://zenodo.org/records/21213596) · [Paper, current status, and methodological caveats](https://github.com/ec75hash/composition-sensitive-register-readouts).
-- **Architectural inheritance and weight correspondence.** Repeated decoder blocks across 31 Qwen checkpoints, two Qwen-derived models, and SOLAR as a calibration control; separate studies of cross-checkpoint weights and neuronal activation responses. [Versioned dataset and reproduction materials](https://huggingface.co/datasets/ec75hash/copy-blocks-qwen/tree/v0.3.0) · [Code mirror](https://github.com/ec75hash/copy-blocks-qwen/tree/v0.3.0-mirror).
-- **In-context availability and routing.** How text already available in a conversation changes expert routing with the final prompt and scored tokens held fixed. [Preprint v1.2](https://zenodo.org/records/23546831) · [Paper and correction history](https://github.com/ec75hash/in-context-availability-moe-routing) · [Versioned evidence](https://huggingface.co/datasets/ec75hash/qwen35-exact-turn-routing/tree/v1.3.1).
-- **Cross-checkpoint Jacobian lenses.** Evaluating how a fitted lens transfers between related checkpoints and how its calibration changes. [Preprint v1.1](https://zenodo.org/records/22133736) · [Evaluation code and data links](https://github.com/ec75hash/jacobian-lens-transfer-qwen36-38).
+## Selected Research
 
-[All papers and publication evidence](https://github.com/ec75hash/ec75hash/blob/main/PUBLICATIONS.md)
+### Mechanistic Interpretability
 
-## Tools and exploratory studies
+**1. In-Context Availability and Expert Routing**
 
-- [MindVolume](https://github.com/ec75hash/MindVolume) / [JVolume](https://github.com/ec75hash/JVolume): web and native macOS viewers for inspecting Jacobian-lens vocabulary projections and their capture data.
-- [DeepSeek planted-answer experiments](https://github.com/ec75hash/dsv4-flash-planted-answer): a preregistered case study of responses to planted answers, with retained predictions, lens readouts, nulls, and a count-verification script.
-- [Gemma SAE steering](https://github.com/ec75hash/gemma-steering-bot) and [consult-lens](https://github.com/ec75hash/consult-lens): exploratory tools for activation interventions and model access to lens measurements.
+Demonstrates how the availability of previously encountered text reorganizes MoE routing, even with target tokens and final prompts held fixed. Includes controlled experiments, cross-checkpoint replication, and corrected, dispatch-verified causal interventions.
 
-Related measurement work: [arithmetic readout sensitivity](https://github.com/jeffreywilliamportfolio/qwen36-arithmetic-readouts) · [repeated blocks and J++ readout check](https://github.com/ec75hash/qwen-depth-upscaling-jpp-check).
+[Paper (v1.2)](https://doi.org/10.5281/zenodo.23546831) · [Code & Methods](https://github.com/ec75hash/in-context-availability-moe-routing)
 
-I publish methods, data, and findings for independent verification, criticism, and collaboration. Conclusions remain open to revision; the linked projects distinguish measured results, limitations, and exploratory interpretations. I’m self-funded, with no institutional affiliation, and welcome comparisons, replications, and notes from other researchers.
+**2. Architectural Inheritance in Qwen**
 
-My [earlier research and software development](https://github.com/jeffreywilliamportfolio) remain available on my previous account. This is my primary research account; historical repositories and their existing links remain in place.
+Identifies repeated decoder-block weight patterns across Qwen checkpoints and investigates structural correspondence, neuronal responses, and functional divergence. Includes pinned revisions, tensor hashes, measurement tables, and reproducibility tools.
+
+[Archived Dataset](https://doi.org/10.5281/zenodo.23546828) · [Current Dataset](https://huggingface.co/datasets/ec75hash/copy-blocks-qwen) · [Code](https://github.com/ec75hash/copy-blocks-qwen)
+
+**3. Cross-Checkpoint Jacobian Lens Transfer**
+
+Investigates whether fitted Jacobian lenses retain useful intermediate representations across related model versions. Finds that semantic readouts can survive checkpoint changes while calibration and depth-dependent performance diverge.
+
+[Paper](https://doi.org/10.5281/zenodo.22133736) · [Code & Evaluations](https://github.com/ec75hash/jacobian-lens-transfer-qwen36-38)
+
+### Routing, Evaluation, and Safety
+
+**4. Expert Specialization During Generation**
+
+Shows that generation-time expert sets track the local subject of model outputs, revealing specialization that pooled prefill measurements can obscure.
+
+[Paper](https://doi.org/10.5281/zenodo.22236999) · [Code & Evidence](https://github.com/ec75hash/paper-expert-specialization-generation)
+
+**5. Dialect-Marked Response Audit (DMRA)**
+
+Develops a matched-pair evaluation protocol to isolate linguistic features contributing to differences in safety-critical assistance, including responses to AAVE-marked prompts.
+
+[Paper](https://doi.org/10.5281/zenodo.22291463) · [Methods & Artifacts](https://github.com/ec75hash/dmra-paper)
+
+**6. Distributed Safety Routing**
+
+Investigates whether refusal behavior depends on individual MoE experts. In a controlled case study, suppressing the leading refusal-associated expert index redistributes routing while refusal behavior persists.
+
+[Paper](https://doi.org/10.5281/zenodo.22088890) · [Code & Evidence](https://github.com/ec75hash/distributed-safety-routing)
+
+---
+
+## Open Research
+
+I conduct this work independently and publish methods, measurements, code, and reproducibility materials wherever possible. My releases document experimental limitations, methodological corrections, and negative or null findings to support independent verification and criticism.
+
+I welcome research collaboration, independent replication, and feedback on experimental methodology.
+
+[Full Publication Index](PUBLICATIONS.md) · [Research Website](https://ec75hash.github.io/) · [Contact](mailto:jws299792@icloud.com)
