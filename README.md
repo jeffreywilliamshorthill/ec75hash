@@ -16,13 +16,13 @@ My research combines structural weight analysis, mixture-of-experts routing, Jac
 
 Demonstrates how the availability of previously encountered text reorganizes MoE routing, even with target tokens and final prompts held fixed. Includes controlled experiments, cross-checkpoint replication, and corrected, dispatch-verified causal interventions.
 
-[Paper (v1.2)](https://doi.org/10.5281/zenodo.23546831) · [Code & Methods](https://github.com/ec75hash/in-context-availability-moe-routing)
+[Paper (v1.2, DOI: 10.5281/zenodo.23546831)](https://doi.org/10.5281/zenodo.23546831) · [Code & Methods](https://github.com/ec75hash/in-context-availability-moe-routing)
 
 **2. Architectural Inheritance in Qwen**
 
 Identifies repeated decoder-block weight patterns across Qwen checkpoints and investigates structural correspondence, neuronal responses, and functional divergence. Includes pinned revisions, tensor hashes, measurement tables, and reproducibility tools.
 
-[Archived Dataset](https://doi.org/10.5281/zenodo.23546828) · [Current Dataset](https://huggingface.co/datasets/ec75hash/copy-blocks-qwen) · [Code](https://github.com/ec75hash/copy-blocks-qwen)
+[Archived Dataset (v0.1.2, DOI: 10.5281/zenodo.23546828)](https://doi.org/10.5281/zenodo.23546828) · [Current Dataset](https://huggingface.co/datasets/ec75hash/copy-blocks-qwen) · [Code](https://github.com/ec75hash/copy-blocks-qwen)
 
 **3. Cross-Checkpoint Jacobian Lens Transfer**
 
@@ -53,6 +53,8 @@ Investigates whether refusal behavior depends on individual MoE experts. In a co
 ---
 
 ## Open Research
+
+The [publication index](PUBLICATIONS.md) records exact Zenodo versions and DOIs, including the availability paper’s v1.2 intervention correction and the distinction between the archived v0.1.2 survey and later dataset studies. My author identifier is [ORCID 0009-0004-3954-2752](https://orcid.org/0009-0004-3954-2752).
 
 I conduct this work independently and publish methods, measurements, code, and reproducibility materials wherever possible. My releases document experimental limitations, methodological corrections, and negative or null findings to support independent verification and criticism.
 
